@@ -10,16 +10,16 @@
         <form method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" class="form-control" required />
+                <input type="text" id="username" name="Username" class="form-control" asp-for="Username" required />
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required />
+                <input type="password" id="password" name="Password" class="form-control" asp-for="Password" required />
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary-login">Login</button>
             </div>
-            @if (Model.ErrorMessage != null)
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
             {
                 <div class="error-message">
                     @Model.ErrorMessage
@@ -28,7 +28,7 @@
         </form>
         <div class="login-links">
             <a asp-page="/Register/Index">Don't have an account?</a>
-            <a asp-page="/ForgotPassword/Page">Forgot password?</a>
+            <a asp-page="/ForgotPassword/Index">Forgot password?</a>
         </div>
     </div>
 </section>

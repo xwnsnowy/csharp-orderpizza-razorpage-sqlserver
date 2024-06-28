@@ -1,4 +1,4 @@
-﻿using OrderLibrary.Models;
+﻿    using OrderLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +10,6 @@ namespace OrderLibrary.Interfaces
     public interface IUserService
     {
         Task AddUserAsync(User user);
+        Task<bool> AuthenticateAsync(string username, string password);
     }
 }

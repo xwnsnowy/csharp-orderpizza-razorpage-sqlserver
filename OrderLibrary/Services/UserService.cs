@@ -21,5 +21,23 @@ namespace OrderLibrary.Services
         {
             await _userRepository.AddAsync(user);
         }
+        public async Task<bool> AuthenticateAsync(string username, string password)
+        {
+            // Retrieve user by username
+            var user = await _userRepository.GetUserByUserNameAsync(username);
+
+            // Check if user exists and if password matches
+            if (user != null && VerifyPassword(user.PasswordHash, password))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private bool VerifyPassword(string storedHash, string password)
+        {
+            // Implement your password hashing comparison logic here
+            return storedHash == password; // Example: plain text comparison (do not use in production)
+        }
     }
 }

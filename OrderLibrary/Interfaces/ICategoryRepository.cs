@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace OrderLibrary.Interfaces
 {
-    public interface IUserRepository : IRepository<User>
+    public interface ICategoryRepository : IRepository<Category>
     {
-        Task<User> GetUserByUserNameAsync(string username);
     }
 }
