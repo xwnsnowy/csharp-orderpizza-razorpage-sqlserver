@@ -8,7 +8,6 @@ namespace OrderLibrary.Models
         public Order()
         {
             OrderDetails = new HashSet<OrderDetail>();
-            Payments = new HashSet<Payment>();
         }
 
         public int OrderId { get; set; }
@@ -19,6 +18,5 @@ namespace OrderLibrary.Models
 
         public virtual User? User { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual ICollection<Payment> Payments { get; set; }
     }
 }

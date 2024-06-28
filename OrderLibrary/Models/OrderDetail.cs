@@ -10,6 +10,8 @@ namespace OrderLibrary.Models
         public int? ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+        public string? Size { get; set; }
+        public string? Extras { get; set; }
 
         public virtual Order? Order { get; set; }
         public virtual Product? Product { get; set; }

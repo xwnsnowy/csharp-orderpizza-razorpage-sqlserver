@@ -14,7 +14,9 @@ builder.Services.AddDbContext<OrderFoodDBContext>(options =>
 
 // Add scoped repositories and services
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUserService, UserService>();
 // Add other repositories and services as needed
 
 // Add session and SignalR

@@ -10,29 +10,27 @@
         <form method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" class="form-control" required />
+                <input type="text" id="username" name="Username" class="form-control" required />
+                <span asp-validation-for="Username"></span>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required />
+                <input type="email" id="email" name="Email" class="form-control" required />
+                <span asp-validation-for="Email"></span>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required />
+                <input type="password" id="password" name="Password" class="form-control" required />
+                <span asp-validation-for="Password"></span>
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" class="form-control" required />
+                <input type="password" id="confirm-password" name="ConfirmPassword" class="form-control" required />
+                <span asp-validation-for="ConfirmPassword"></span>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary-login">Register</button>
             </div>
-            @if (Model.ErrorMessage != null)
-            {
-                <div class="error-message">
-                    @Model.ErrorMessage
-                </div>
-            }
         </form>
         <div class="login-links">
             <a href="/Login">Already have an account? Login</a>

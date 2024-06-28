@@ -19,7 +19,6 @@ namespace OrderLibrary.Models
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
-        public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
@@ -61,6 +60,8 @@ namespace OrderLibrary.Models
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
+                entity.Property(e => e.Size).HasMaxLength(50);
+
                 entity.Property(e => e.UnitPrice).HasColumnType("decimal(10, 2)");
 
                 entity.HasOne(d => d.Order)
@@ -72,22 +73,6 @@ namespace OrderLibrary.Models
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__OrderDeta__Produ__33D4B598");
-            });
-
-            modelBuilder.Entity<Payment>(entity =>
-            {
-                entity.Property(e => e.Amount).HasColumnType("decimal(10, 2)");
-
-                entity.Property(e => e.PaymentDate)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
-
-                entity.Property(e => e.PaymentMethod).HasMaxLength(50);
-
-                entity.HasOne(d => d.Order)
-                    .WithMany(p => p.Payments)
-                    .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__Payments__OrderI__37A5467C");
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -112,7 +97,7 @@ namespace OrderLibrary.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__A9D105343F05F735")
+                entity.HasIndex(e => e.Email, "UQ__Users__A9D10534E227E771")
                     .IsUnique();
 
                 entity.Property(e => e.Address).HasMaxLength(300);
