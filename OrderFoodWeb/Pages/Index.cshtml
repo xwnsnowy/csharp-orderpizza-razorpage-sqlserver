@@ -1,0 +1,12 @@
+﻿@page
+@model OrderFoodWeb.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <partial name="~/Pages/Components/_Hero.cshtml" />
+    <partial name="~/Pages/Components/_Newest.cshtml" model="Model.NewestProducts" />
+    <partial name="~/Pages/Components/_About.cshtml" />
+    <partial name="~/Pages/Components/_ContactUs.cshtml" />
+</div>

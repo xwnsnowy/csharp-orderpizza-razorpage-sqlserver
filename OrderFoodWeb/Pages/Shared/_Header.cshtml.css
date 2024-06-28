@@ -1,0 +1,101 @@
+﻿/* Basic reset */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header and Navbar styles */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    margin-bottom: 1rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    padding: .5rem 1rem;
+    color: #007bff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #0056b3;
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #0056b3;
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.navbar-brand {
+    color: #007bff;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+    .navbar-brand:hover {
+        color: #0056b3;
+    }
+
+/* Flexbox alignment */
+.navbar-nav.ms-auto {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav.auth-links .nav-link {
+    margin-left: 15px;
+}
+
+    .navbar-nav.auth-links .nav-link.btn {
+        margin-left: 10px;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .navbar-nav.auth-links .nav-link.btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+/* Logo styling */
+.navbar-brand .logo {
+    height: 40px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 767px) {
+    .navbar-nav.ms-auto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav.auth-links {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+        .navbar-nav.auth-links .nav-link {
+            margin: 0;
+            margin-top: 10px;
+        }
+}

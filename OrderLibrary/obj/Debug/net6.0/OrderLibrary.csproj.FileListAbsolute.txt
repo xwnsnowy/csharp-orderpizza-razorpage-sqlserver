@@ -1,0 +1,15 @@
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\bin\Debug\net6.0\OrderLibrary.deps.json
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\bin\Debug\net6.0\OrderLibrary.runtimeconfig.json
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\bin\Debug\net6.0\OrderLibrary.dll
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\bin\Debug\net6.0\OrderLibrary.pdb
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.csproj.AssemblyReference.cache
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.AssemblyInfoInputs.cache
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.AssemblyInfo.cs
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.csproj.CoreCompileInputs.cache
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.sourcelink.json
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.dll
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\refint\OrderLibrary.dll
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.pdb
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\OrderLibrary.genruntimeconfig.cache
+D:\Ky5\PRN221\source\repos\OrderFood\OrderLibrary\obj\Debug\net6.0\ref\OrderLibrary.dll

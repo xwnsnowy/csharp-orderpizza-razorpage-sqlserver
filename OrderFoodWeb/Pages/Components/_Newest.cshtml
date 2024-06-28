@@ -1,0 +1,22 @@
+﻿@model IEnumerable<OrderLibrary.Models.Product>
+
+<section class="best-sellers-section">
+    <div class="text-center mb-4">
+        <div class="section-headers">
+            <h3 class="sub-header">Check Out</h3>
+            <h1 class="main-header text-primary" >Our Newest</h1>
+        </div>
+    </div>
+    <div class="grid">
+        @foreach (var item in Model)
+        {
+            <div class="menu-item">
+                <img src="@item.ImageUrl" alt="@item.ProductName" class="menu-item-image">
+                <h2 class="menu-item-name">@item.ProductName</h2>
+                <p class="menu-item-description">@item.Description</p>
+                <div class="menu-item-price">$@item.Price</div>
+                <button class="add-to-cart-button" >Add to Cart</button>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,112 @@
+.contact-section[b-hzxku5cnnu] {
+    padding: 5rem 0 8rem 0;
+    background-color: #f8f9fa; 
+    text-align: center;
+}
+
+.contact-container[b-hzxku5cnnu] {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-header[b-hzxku5cnnu] {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40; 
+    margin-bottom: 1.5rem;
+}
+
+.contact-container p[b-hzxku5cnnu] {
+    font-size: 1.1rem;
+    color: #6c757d; 
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.form-group[b-hzxku5cnnu] {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-control[b-hzxku5cnnu] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ced4da; 
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #495057; 
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus[b-hzxku5cnnu] {
+        outline: none;
+        border-color: #007bff; 
+    }
+
+textarea.form-control[b-hzxku5cnnu] {
+    resize: vertical;
+}
+
+.contact-container[b-hzxku5cnnu] {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-header[b-hzxku5cnnu] {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40; /* Dark gray text color */
+    margin-bottom: 1.5rem;
+}
+
+.contact-container p[b-hzxku5cnnu] {
+    font-size: 1.1rem;
+    color: #6c757d; 
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.form-group[b-hzxku5cnnu] {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-control[b-hzxku5cnnu] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #495057; /* Dark gray text color */
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus[b-hzxku5cnnu] {
+        outline: none;
+        border-color: #007bff; 
+    }
+
+textarea.form-control[b-hzxku5cnnu] {
+    resize: vertical;
+}
+
+.btn-primary[b-hzxku5cnnu] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover[b-hzxku5cnnu] {
+        background-color: #0056b3; 
+    }
+
+}
+
+    .btn-primary:hover[b-hzxku5cnnu] {
+        background-color: #0056b3; 
+    }

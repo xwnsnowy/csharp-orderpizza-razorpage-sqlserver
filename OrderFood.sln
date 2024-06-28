@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderLibrary", "OrderLibrary\OrderLibrary.csproj", "{FE980937-D6C8-4BBB-9287-218CA390D8F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderFoodWeb", "OrderFoodWeb\OrderFoodWeb.csproj", "{1FB482B9-D719-4180-99D8-F0B18A29C7E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE980937-D6C8-4BBB-9287-218CA390D8F9} = {FE980937-D6C8-4BBB-9287-218CA390D8F9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE980937-D6C8-4BBB-9287-218CA390D8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE980937-D6C8-4BBB-9287-218CA390D8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE980937-D6C8-4BBB-9287-218CA390D8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE980937-D6C8-4BBB-9287-218CA390D8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB482B9-D719-4180-99D8-F0B18A29C7E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB482B9-D719-4180-99D8-F0B18A29C7E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB482B9-D719-4180-99D8-F0B18A29C7E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB482B9-D719-4180-99D8-F0B18A29C7E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD14503D-C87A-4E85-9EC5-C8E1C6A33EA7}
+	EndGlobalSection
+EndGlobal

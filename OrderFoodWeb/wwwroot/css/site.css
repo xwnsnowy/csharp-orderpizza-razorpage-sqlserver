@@ -1,0 +1,339 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+.text-primary{
+    color: red!important;
+}
+.text-black {
+    color: black;
+}
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 9999px; /* Hình tròn */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+.navbar-brand .logo {
+    height: 60px;
+    width: auto;
+}
+
+/* wwwroot/css/hero.css */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        max-width: 500px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 9999px; /* Hình tròn */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .hero button:hover {
+            background-color: #0056b3;
+        }
+
+    .hero .text-primary {
+        color: orange;
+    }
+
+.pizza-image {
+    width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+        .hero .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .hero h1 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .hero button {
+            margin-top: 1rem;
+        }
+}
+
+ /*Best seler*/
+
+.best-sellers-section {
+    height: 750px;
+    position: relative;
+    padding: 2rem;
+}
+
+.image-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -10;
+}
+
+.left-image {
+    position: absolute;
+    left: -200px;
+    top: -70px;
+}
+
+.right-image {
+    position: absolute;
+    right: -200px;
+    top: -70px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.section-headers .sub-header {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.section-headers .main-header {
+    font-size: 2.7rem;
+    font-weight: bold;
+    font-style:italic;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu-item-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-item-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.menu-item-description {
+    color: #666;
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+.menu-item-price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart-button {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+    .add-to-cart-button:hover {
+        background-color: #218838;
+    }
+/* cart.css */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu-item-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-item-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.menu-item-description {
+    color: #666;
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+.menu-item-price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.bg-gray-100 {
+    background-color: #f7fafc;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.pl-2 {
+    padding-left: 0.5rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

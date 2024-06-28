@@ -1,0 +1,68 @@
+/* wwwroot/css/hero.css */
+.hero[b-ogs0p3jlqz] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+    .hero h1[b-ogs0p3jlqz] {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero p[b-ogs0p3jlqz] {
+        max-width: 500px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero button[b-ogs0p3jlqz] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 9999px; /* Hình tròn */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .hero button:hover[b-ogs0p3jlqz] {
+            background-color: #0056b3;
+        }
+
+    .hero .text-primary[b-ogs0p3jlqz] {
+        color: #1b6ec2;
+    }
+
+.pizza-image[b-ogs0p3jlqz] {
+    width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero[b-ogs0p3jlqz] {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+        .hero .py-8[b-ogs0p3jlqz] {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .hero h1[b-ogs0p3jlqz] {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .hero p[b-ogs0p3jlqz] {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .hero button[b-ogs0p3jlqz] {
+            margin-top: 1rem;
+        }
+}

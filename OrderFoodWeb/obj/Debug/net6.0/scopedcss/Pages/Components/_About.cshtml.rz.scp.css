@@ -1,0 +1,23 @@
+.section-container[b-iwd219yn3l] {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff; /* Nền trắng */
+    border-radius: 8px; /* Bo tròn viền */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.section-header[b-iwd219yn3l] {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333333; /* Màu chữ đậm */
+}
+
+.section-content[b-iwd219yn3l] {
+    font-size: 1.1rem;
+    color: #666666; /* Màu chữ trung bình */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Căn lề trái cho văn bản */
+}

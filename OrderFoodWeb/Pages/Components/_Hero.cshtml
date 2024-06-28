@@ -1,0 +1,31 @@
+﻿@* Pages/Components/_Hero.cshtml *@
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<section class="hero md:mt-4">
+    <div class="py-8 " >
+        <h1 class="text-4xl font-semibold">
+            Everything
+            is better<br />
+            with a&nbsp;
+            <span style="color: red">
+                Pizza
+            </span>
+        </h1>
+        <p class="my-6 text-gray-500 text-sm">
+            Pizza is the missing piece that makes every day complete, a simple yet delicious joy in life
+        </p>
+        <div class="flex gap-4 text-sm " style="display:flex">
+            <a href="/Products" class="flex justify-center gap-2 nav-link text-white btn-primary" style="background-color: red; text-decoration: none;">
+                Order now
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="/About" class="flex justify-center gap-2 nav-link text-black btn-primary" style="background-color:white; border: none">
+                Learn more
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+    <div class="relative hidden md:block">
+        <img src="~/images/pizza-hero.png" class="pizza-image" alt="pizza" />
+    </div>
+</section>
