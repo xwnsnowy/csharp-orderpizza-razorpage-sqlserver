@@ -12,12 +12,15 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<OrderFoodDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add scoped repositories and services
+// Add scoped repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+// Add scoped services
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
-// Add other repositories and services as needed
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Add session and SignalR
 builder.Services.AddSession();

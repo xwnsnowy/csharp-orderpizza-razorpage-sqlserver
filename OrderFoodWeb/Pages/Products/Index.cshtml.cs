@@ -24,7 +24,7 @@ namespace OrderFoodWeb.Pages.Products
 
         public async Task OnGetAsync(int? categoryId)
         {
-            Categories = await _categoryService.GetAllCategoriesAsync();
+            Categories = (await _categoryService.GetAllCategoriesAsync()).ToList();
 
             if (categoryId.HasValue)
             {

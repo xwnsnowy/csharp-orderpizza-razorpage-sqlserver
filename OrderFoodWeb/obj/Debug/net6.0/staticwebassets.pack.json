@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\css\\products.css",
+      "PackagePath": "staticwebassets\\css\\products.css"
+    },
+    {
       "Id": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

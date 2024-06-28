@@ -9,5 +9,6 @@ namespace OrderLibrary.Interfaces
 {
     public interface ICategoryRepository : IRepository<Category>
     {
+
     }
 }

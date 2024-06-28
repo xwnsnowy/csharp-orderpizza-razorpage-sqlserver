@@ -1,0 +1,99 @@
+﻿.menu-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.categories-container {
+    flex: 0 0 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+}
+
+.category-header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .category-list li {
+        margin-bottom: 8px; 
+    }
+
+        .category-list li a {
+            display: block;
+            padding: 12px 24px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+            .category-list li a:hover {
+                background-color: #218838;
+            }
+
+
+
+.products-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.best-sellers-section {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-item-image {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.menu-item-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.menu-item-description {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.menu-item-price {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .add-to-cart-button:hover {
+        background-color: #0056b3;
+    }
