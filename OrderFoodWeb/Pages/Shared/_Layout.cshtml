@@ -6,7 +6,10 @@
     <title>@ViewData["Title"] - Order Food</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/OrderFoodWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cart.css?v=1.0" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/products.css?v=1.0" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css?v=1.0" asp-append-version="true" />
+
     <script src="https://kit.fontawesome.com/05477a19da.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,6 +25,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/cart.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

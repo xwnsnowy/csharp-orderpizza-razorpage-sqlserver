@@ -2,32 +2,21 @@
 @model OrderFoodWeb.Pages.Cart.IndexModel
 @{
     ViewData["Title"] = "Cart";
-
-    var cartProducts = new List<dynamic>
-    {
-        new { Id = 1, Name = "Margherita Pizza", Image = "~/images/pizza1.jpg", Size = "Large", Extras = new List<dynamic> { new { Name = "Extra Cheese", Price = 2.0 } }, Price = 15.0 },
-        new { Id = 2, Name = "Pepperoni Pizza", Image = "~/images/pizza2.jpg", Size = "Medium", Extras = new List<dynamic> { new { Name = "Extra Pepperoni", Price = 3.0 } }, Price = 18.0 }
-    };
-
-    // double subtotal = cartProducts.Sum(p => (double)p.Price + p.Extras.Sum(e => (double)e.Price));
-    double deliveryFee = 5.0;
-    double total = 5000;
-
-    var address = new { Phone = "", StreetAddress = "", PostalCode = "", City = "", Country = "" };
 }
+
 <section class="mt-8">
     <div class="text-center">
         <h1 class="main-header text-primary" style="font-style:italic">Cart</h1>
     </div>
     <div class="mt-8 grid gap-8 grid-cols-2">
         <div>
-            @if (cartProducts.Count == 0)
+            @if (Model.CartProducts.Count == 0)
             {
                 <div class="text-center text-gray-500">Your shopping cart is empty 😔</div>
             }
             else
             {
-                @foreach (var product in cartProducts)
+                @foreach (var product in Model.CartProducts)
                 {
                     <div class="flex items-center gap-4 border-b py-4">
                         <div class="w-24">
@@ -50,12 +39,14 @@
                             }
                         </div>
                         <div class="text-lg font-semibold">
-                            5000
+                            $@product.Price
                         </div>
                         <div class="ml-2">
-                            <button type="button" class="p-2" onclick="removeProduct(@product.Id)">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
+                            <form method="post" asp-page-handler="RemoveFromCart" asp-route-productId="@product.Id">
+                                <button type="submit" class="p-2">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 }
@@ -66,9 +57,9 @@
                         Total:
                     </div>
                     <div class="font-semibold pl-2 text-right">
-                        5000<br />
-                        5000<br />
-                        5000
+                        $@Model.Subtotal<br />
+                        $@Model.DeliveryFee<br />
+                        $@Model.Total
                     </div>
                 </div>
             }
@@ -77,26 +68,26 @@
             <h2>Checkout</h2>
             <form method="post" asp-page-handler="ProceedToCheckout">
                 <label>Phone</label>
-                <input type="tel" placeholder="Phone number" value="@address.Phone" />
+                <input type="tel" placeholder="Phone number" asp-for="Address.Phone" />
 
                 <label>Street address</label>
-                <input type="text" placeholder="Street address" value="@address.StreetAddress" />
+                <input type="text" placeholder="Street address" asp-for="Address.StreetAddress" />
 
                 <div class="grid grid-cols-2 gap-2">
                     <div>
                         <label>Postal code</label>
-                        <input type="text" placeholder="Postal code" value="@address.PostalCode" />
+                        <input type="text" placeholder="Postal code" asp-for="Address.PostalCode" />
                     </div>
                     <div>
                         <label>City</label>
-                        <input type="text" placeholder="City" value="@address.City" />
+                        <input type="text" placeholder="City" asp-for="Address.City" />
                     </div>
                 </div>
 
                 <label>Country</label>
-                <input type="text" placeholder="Country" value="@address.Country" />
+                <input type="text" placeholder="Country" asp-for="Address.Country" />
 
-                <button type="submit" class="btn btn-primary mt-4">Pay $@total</button>
+                <button type="submit" class="btn btn-primary mt-4">Pay $@Model.Total</button>
             </form>
         </div>
     </div>
@@ -104,10 +95,7 @@
 
 @section Scripts {
     <script>
-        function removeProduct(productId) {
-            // Implement your product removal logic here
-            alert('Remove product with ID: ' + productId);
-        }
+        // Optional: JavaScript logic if needed
     </script>
 }
 

@@ -4,6 +4,7 @@ using OrderLibrary.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OrderFoodWeb.Pages.Products
 {
@@ -24,6 +25,7 @@ namespace OrderFoodWeb.Pages.Products
 
         public async Task OnGetAsync(int? categoryId)
         {
+
             Categories = (await _categoryService.GetAllCategoriesAsync()).ToList();
 
             if (categoryId.HasValue)

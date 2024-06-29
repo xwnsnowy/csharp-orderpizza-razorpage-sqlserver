@@ -21,7 +21,7 @@ namespace OrderFoodWeb.Pages
 
         public async Task OnGetAsync()
         {
-            NewestProducts = (await _productService.GetLatestProducts(4)).ToList();
+            NewestProducts = (await _productService.GetLatestProducts(5)).ToList();
         }
     }
 }

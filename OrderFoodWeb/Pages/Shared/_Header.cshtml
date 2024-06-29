@@ -42,11 +42,17 @@
                             <a class="nav-link text-white btn-primary" asp-area="" asp-page="/Register/Index" style="background-color: red; padding-left: 30px; padding-right:30px;">Register</a>
                         </li>
                     }
+
                     <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-page="/Cart/Index"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="nav-link text-black" asp-area="" asp-page="/Cart/Index">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount" class="badge badge-pill badge-danger">0</span>
+                        </a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+

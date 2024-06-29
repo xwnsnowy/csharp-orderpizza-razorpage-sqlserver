@@ -24,6 +24,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Add session and SignalR
 builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddSignalR();
 
 var app = builder.Build();

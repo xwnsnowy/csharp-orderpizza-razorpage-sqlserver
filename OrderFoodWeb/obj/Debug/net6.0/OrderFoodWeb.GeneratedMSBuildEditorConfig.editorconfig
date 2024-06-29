@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Ky5\PRN221\source\repos\OrderFood\OrderFoodWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Ky5/PRN221/source/repos/OrderFood/OrderFoodWeb/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ky5/PRN221/source/repos/OrderFood/OrderFoodWeb/Pages/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

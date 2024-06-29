@@ -8,17 +8,21 @@
     <div class="categories-container">
         <h2 class="category-header">Categories</h2>
         <ul class="category-list">
+            <li>
+                <a href="/Products" class="category-link">All Products</a>
+                </a>
+            </li>
             @foreach (var category in Model.Categories)
             {
                 <li>
-                    <a asp-page="./Index" asp-route-categoryId="@category.CategoryId">
+                    <a asp-page="./Index" asp-route-categoryId="@category.CategoryId" class="category-link">
                         @category.CategoryName
                     </a>
                 </li>
             }
         </ul>
     </div>
-    <section class="best-sellers-section">
+    <section class="products-section">
         <div class="text-center mb-4">
             <div class="section-headers">
                 <h1 class="main-header text-primary">Pizza</h1>
@@ -39,4 +43,45 @@
     </section>
 </div>
 
-<link rel="stylesheet" href="~/css/products.css" />
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-product-details">
+            <img id="popupProductImage" src="" alt="Product Image" class="popup-product-image">
+            <h2 id="popupProductName" class="popup-product-name"></h2>
+            <p id="popupProductDescription" class="popup-product-description"></p>
+        </div>
+        <h2>Select Size and Extras</h2>
+        <form id="cartForm">
+            <input type="hidden" id="productId" name="productId" value="">
+            <label for="size">Size:</label>
+            <label class="size-options">
+                <input type="radio" id="sizeSmall" name="size" value="small">
+                Small
+            </label>
+            <label class="size-options">
+                <input type="radio" id="sizeMedium" name="size" value="medium">
+                Medium
+            </label>
+            <label class="size-options">
+                <input type="radio" id="sizeLarge" name="size" value="large">
+                Large
+            </label>
+
+            <label for="extras">Any Extras?</label>
+            <label class="extras-options">
+                <input type="checkbox" id="extra1" name="extra1" value="extra1">
+                Extra cheese + 1$
+            </label>
+            <label class="extras-options">
+                <input type="checkbox" id="extra2" name="extra2" value="extra2">
+                Extra pepperoni + 2$
+            </label>
+
+            <button type="submit">Add to Cart</button>
+        </form>
+
+        <button class="close" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+

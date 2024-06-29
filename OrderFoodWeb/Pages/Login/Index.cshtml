@@ -1,42 +1,35 @@
-﻿@page "{categoryId:int?}"
-@model OrderFoodWeb.Pages.Products.IndexModel
+﻿@page
+@model OrderFoodWeb.Pages.Login.IndexModel
 @{
-    ViewData["Title"] = "Menu Pizza";
+    ViewData["Title"] = "Login";
 }
 
-<div class="menu-container">
-    <div class="categories-container">
-        <h2 class="category-header">Categories</h2>
-        <ul class="category-list">
-            @foreach (var category in Model.Categories)
-            {
-                <li>
-                    <a asp-page="./Index" asp-route-categoryId="@category.CategoryId" class="category-link">
-                        @category.CategoryName
-                    </a>
-                </li>
-            }
-        </ul>
-    </div>
-    <section class="products-section">
-        <div class="text-center mb-4">
-            <div class="section-headers">
-                <h1 class="main-header text-primary">Pizza</h1>
+<section class="login-section">
+    <div class="login-container">
+        <h2 class="login-header">Login to Your Account</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="Username" class="form-control" asp-for="Username" required />
             </div>
-        </div>
-        <div class="grid">
-            @foreach (var product in Model.Products)
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="Password" class="form-control" asp-for="Password" required />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary-login">Login</button>
+            </div>
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
             {
-                <div class="menu-item">
-                    <img src="@product.ImageUrl" alt="@product.ProductName" class="menu-item-image">
-                    <h2 class="menu-item-name">@product.ProductName</h2>
-                    <p class="menu-item-description">@product.Description</p>
-                    <div class="menu-item-price">$@product.Price</div>
-                    <button class="add-to-cart-button">Add to Cart</button>
+                <div class="error-message">
+                    @Model.ErrorMessage
                 </div>
             }
+        </form>
+        <div class="login-links">
+            <a asp-page="/Register/Index">Don't have an account?</a>
+            <a asp-page="/ForgotPassword/Index">Forgot password?</a>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 
-<link rel="stylesheet" href="~/css/products.css" />

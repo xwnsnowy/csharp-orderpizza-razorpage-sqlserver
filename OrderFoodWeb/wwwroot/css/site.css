@@ -188,12 +188,6 @@ button.accept-policy {
     font-style:italic;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
 .menu-item {
     border: 1px solid #ddd;
     border-radius: 8px;
