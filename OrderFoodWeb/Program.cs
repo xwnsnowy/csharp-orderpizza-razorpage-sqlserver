@@ -27,6 +27,17 @@ builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSignalR();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 
 var app = builder.Build();
 
@@ -41,6 +52,8 @@ app.UseRouting();
 
 // Use session
 app.UseSession();
+
+app.UseCors("AllowOrigin");
 
 app.UseAuthorization();
 

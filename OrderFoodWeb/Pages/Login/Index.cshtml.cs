@@ -44,7 +44,6 @@ namespace OrderFoodWeb.Pages.Login
                 return Page();
             }
 
-            // Store username in session upon successful authentication
             HttpContext.Session.SetString("Username", Username);
 
             return RedirectToPage("/Index"); 

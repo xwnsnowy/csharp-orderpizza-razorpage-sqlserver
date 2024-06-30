@@ -23,7 +23,7 @@
                         <a class="nav-link" asp-area="" asp-page="/Contact/Index">Contact</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto auth-links">
+                <ul class="navbar-nav ms-auto auth-links" style="justify-content:center; align-items: center">
                     @if (Context.Session.GetString("Username") != null)
                     {
                         <li class="nav-item" style="margin-right:5px">

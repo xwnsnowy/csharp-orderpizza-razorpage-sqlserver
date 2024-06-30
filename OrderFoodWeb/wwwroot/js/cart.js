@@ -30,7 +30,6 @@ function closeIfClickOutside(event) {
     }
 }
 
-// Bắt sự kiện khi click vào nút "Add to Cart"
 document.addEventListener("DOMContentLoaded", function () {
     var addToCartButtons = document.querySelectorAll(".add-to-cart-button");
     addToCartButtons.forEach(function (button) {
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var menuItem = button.closest(".menu-item");
             var product = {
-                id: menuItem.dataset.productId,
+                id: parseInt(menuItem.dataset.productId), // Chuyển đổi sang kiểu số nguyên
                 imageUrl: menuItem.querySelector(".menu-item-image").src,
                 name: menuItem.querySelector(".menu-item-name").textContent,
                 description: menuItem.querySelector(".menu-item-description").textContent
@@ -49,34 +48,36 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Xử lý form khi submit
     var cartForm = document.getElementById("cartForm");
     cartForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Lấy dữ liệu từ form (size và extras)
-        var formData = new FormData(cartForm);
-        var productId = formData.get("productId");
-        var size = formData.get("size");
-        var extras = formData.getAll("extras");
+        var productId = parseInt(document.getElementById("productId").value);
+        var size = document.querySelector('input[name="size"]:checked').value;
+        var extras = [];
+        document.querySelectorAll('input[name="extras"]:checked').forEach(function (checkbox) {
+            extras.push(checkbox.value);
+        });
 
-        // Tạo đối tượng sản phẩm từ dữ liệu thu thập được
         var productData = {
-            productId: productId,
-            imageUrl: document.getElementById("popupProductImage").src,
-            name: document.getElementById("popupProductName").textContent,
-            description: document.getElementById("popupProductDescription").textContent,
-            size: size,
-            extras: extras
+            Id: productId,
+            ImageUrl: document.getElementById("popupProductImage").src,
+            Name: document.getElementById("popupProductName").textContent,
+            Description: document.getElementById("popupProductDescription").textContent,
+            Size: size,
+            Extras: extras
         };
+
 
         console.log("Product Data:", productData);
 
-        // Gửi dữ liệu sản phẩm lên server (ví dụ qua fetch)
-        fetch('/Cart/AddToCart', {
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+        fetch('/Cart/Index?handler=AddToCart', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'XSRF-TOKEN': token
             },
             body: JSON.stringify(productData)
         })
@@ -87,15 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 throw new Error('Failed to add product to cart.');
             })
             .then(data => {
-                // Xử lý kết quả từ server (nếu cần)
-                console.log(data.message); // Ví dụ hiển thị thông báo
-                cartCount++; // Tăng số lượng sản phẩm trong giỏ hàng
-                document.getElementById("cartCount").textContent = cartCount; // Cập nhật giao diện số lượng giỏ hàng
-                closePopup(); // Đóng popup sau khi xử lý
+                console.log(data.message);
+                cartCount++;
+                document.getElementById("cartCount").textContent = cartCount;
+                closePopup();
             })
             .catch(error => {
                 console.error('Error:', error);
-                // Xử lý lỗi (hiển thị thông báo lỗi cho người dùng nếu cần)
             });
     });
 });

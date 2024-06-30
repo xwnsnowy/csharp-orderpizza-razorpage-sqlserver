@@ -1,0 +1,101 @@
+/* Basic reset */
+body[b-lfmhsfe48a] {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header and Navbar styles */
+header[b-lfmhsfe48a] {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    margin-bottom: 1rem;
+}
+
+.navbar-toggler[b-lfmhsfe48a] {
+    border: none;
+}
+
+.navbar-toggler-icon[b-lfmhsfe48a] {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link[b-lfmhsfe48a] {
+    padding: .5rem 1rem;
+    color: #007bff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+    .navbar-nav .nav-link:hover[b-lfmhsfe48a] {
+        color: #0056b3;
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+
+.navbar-nav .nav-item.active .nav-link[b-lfmhsfe48a] {
+    color: #0056b3;
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.navbar-brand[b-lfmhsfe48a] {
+    color: #007bff;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+    .navbar-brand:hover[b-lfmhsfe48a] {
+        color: #0056b3;
+    }
+
+/* Flexbox alignment */
+.navbar-nav.ms-auto[b-lfmhsfe48a] {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav.auth-links .nav-link[b-lfmhsfe48a] {
+    margin-left: 15px;
+}
+
+    .navbar-nav.auth-links .nav-link.btn[b-lfmhsfe48a] {
+        margin-left: 10px;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .navbar-nav.auth-links .nav-link.btn:hover[b-lfmhsfe48a] {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+/* Logo styling */
+.navbar-brand .logo[b-lfmhsfe48a] {
+    height: 40px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 767px) {
+    .navbar-nav.ms-auto[b-lfmhsfe48a] {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav.auth-links[b-lfmhsfe48a] {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+        .navbar-nav.auth-links .nav-link[b-lfmhsfe48a] {
+            margin: 0;
+            margin-top: 10px;
+        }
+}

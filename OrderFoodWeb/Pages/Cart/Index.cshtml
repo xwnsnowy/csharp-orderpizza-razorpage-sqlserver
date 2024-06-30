@@ -4,6 +4,7 @@
     ViewData["Title"] = "Cart";
 }
 
+
 <section class="mt-8">
     <div class="text-center">
         <h1 class="main-header text-primary" style="font-style:italic">Cart</h1>
@@ -20,7 +21,7 @@
                 {
                     <div class="flex items-center gap-4 border-b py-4">
                         <div class="w-24">
-                            <img src="@product.Image" alt="@product.Name" class="w-full" />
+                            <img src="@product.ImageUrl" alt="@product.Name" class="w-full" />
                         </div>
                         <div class="flex-grow">
                             <h3 class="font-semibold">@product.Name</h3>
@@ -93,10 +94,5 @@
     </div>
 </section>
 
-@section Scripts {
-    <script>
-        // Optional: JavaScript logic if needed
-    </script>
-}
 
 <link rel="stylesheet" href="~/css/cart.css" />

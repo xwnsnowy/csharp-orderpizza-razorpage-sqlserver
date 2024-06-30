@@ -22,19 +22,27 @@ namespace OrderFoodWeb.Pages.Products
         public IList<Product> Products { get; set; }
         public IList<Category> Categories { get; set; }
         public int? CategoryId { get; set; }
+        public int CurrentPage { get; set; } = 1;
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; } = 8;
 
-        public async Task OnGetAsync(int? categoryId)
+        public async Task OnGetAsync(int? categoryId, int? pageIndex)
         {
-
             Categories = (await _categoryService.GetAllCategoriesAsync()).ToList();
+            CategoryId = categoryId;
+            CurrentPage = pageIndex ?? 1;
 
             if (categoryId.HasValue)
             {
-                Products = (await _productService.GetProductsByCategoryAsync(categoryId.Value)).ToList();
+                var productsResult = await _productService.GetProductsByCategoryAsync(categoryId.Value);
+                Products = productsResult.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+                TotalPages = (int)Math.Ceiling(productsResult.Count() / (double)PageSize);
             }
             else
             {
-                Products = (await _productService.GetAllProductsAsync()).ToList();
+                var productsResult = await _productService.GetAllProductsAsync();
+                Products = productsResult.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+                TotalPages = (int)Math.Ceiling(productsResult.Count() / (double)PageSize);
             }
         }
     }
