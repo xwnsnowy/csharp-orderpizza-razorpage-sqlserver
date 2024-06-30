@@ -10,6 +10,7 @@ function openPopup(product) {
 
     // Set the product ID in the hidden field
     document.getElementById("productId").value = product.id;
+    document.getElementById("basePrice").value = product.basePrice;
 
     popup.style.display = "block";
     document.addEventListener("mousedown", closeIfClickOutside);
@@ -38,10 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var menuItem = button.closest(".menu-item");
             var product = {
-                id: parseInt(menuItem.dataset.productId), // Chuyển đổi sang kiểu số nguyên
+                id: parseInt(menuItem.dataset.productId), 
                 imageUrl: menuItem.querySelector(".menu-item-image").src,
                 name: menuItem.querySelector(".menu-item-name").textContent,
-                description: menuItem.querySelector(".menu-item-description").textContent
+                description: menuItem.querySelector(".menu-item-description").textContent,
+                basePrice: parseFloat(menuItem.dataset.productPrice)
             };
 
             openPopup(product);
@@ -51,13 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var cartForm = document.getElementById("cartForm");
     cartForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
         var productId = parseInt(document.getElementById("productId").value);
+        var basePrice = parseFloat(document.getElementById('basePrice').value);
+
         var size = document.querySelector('input[name="size"]:checked').value;
         var extras = [];
         document.querySelectorAll('input[name="extras"]:checked').forEach(function (checkbox) {
             extras.push(checkbox.value);
         });
+
+        const extraPrices = {
+            "Extra cheese": 1,
+            "Extra pepperoni": 2
+        };
 
         var productData = {
             Id: productId,
@@ -65,7 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
             Name: document.getElementById("popupProductName").textContent,
             Description: document.getElementById("popupProductDescription").textContent,
             Size: size,
-            Extras: extras.map(extra => { return { Name: extra, Price: 0 }; }) 
+            BasePrice: basePrice,
+            Extras: extras.map(extra => {
+                return {
+                    Name: extra,
+                    Price: extraPrices[extra]
+                };
+            })
         };
 
 

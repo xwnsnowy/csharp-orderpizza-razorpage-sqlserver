@@ -1,4 +1,4 @@
-﻿@page 
+﻿@page
 @model OrderFoodWeb.Pages.Products.IndexModel
 @{
     ViewData["Title"] = "Menu Pizza";
@@ -30,7 +30,7 @@
         <div class="grid">
             @foreach (var product in Model.Products)
             {
-                <div class="menu-item" data-product-id="@product.ProductId">
+                <div class="menu-item" data-product-id="@product.ProductId" data-product-price="@product.Price">
                     <img src="@product.ImageUrl" alt="@product.ProductName" class="menu-item-image">
                     <h2 class="menu-item-name">@product.ProductName</h2>
                     <p class="menu-item-description">@product.Description</p>
@@ -73,6 +73,7 @@
         <form id="cartForm">
             @Html.AntiForgeryToken()
             <input type="hidden" id="productId" name="productId" value="">
+            <input type="hidden" id="basePrice" name="basePrice" value="">
             <label for="size">Size:</label>
             <label class="size-options">
                 <input type="radio" id="sizeSmall" name="size" value="small">

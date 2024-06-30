@@ -57,7 +57,7 @@ namespace OrderFoodWeb.Pages.Cart
 
             return RedirectToPage("/Cart/Index");
         }
-        //su dung [FromBody] de ASP.NET Core bind du lieu JSON den tham so ProductData.
+
         public IActionResult OnPostAddToCart([FromBody] ProductData productData)
         {
             if (!ModelState.IsValid)
@@ -82,7 +82,7 @@ namespace OrderFoodWeb.Pages.Cart
 
         private void CalculateCartTotal()
         {
-            Subtotal = CartProducts.Sum(p => p.Price);
+            Subtotal = CartProducts.Sum(p => p.BasePrice + p.Extras.Sum(e => e.Price));
             Total = Subtotal + DeliveryFee;
         }
     }
@@ -95,7 +95,8 @@ namespace OrderFoodWeb.Pages.Cart
         public string? Description { get; set; }
         public string? Size { get; set; }
         public List<ExtraData> Extras { get; set; } = new List<ExtraData>();
-        public double Price { get; set; }
+        public double BasePrice { get; set; }
+        public double Price => BasePrice + Extras.Sum(e => e.Price);
     }
 
     public class ExtraData
