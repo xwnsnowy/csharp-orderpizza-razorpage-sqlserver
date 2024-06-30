@@ -2298,6 +2298,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNetCore.SignalR.Client >= 6.0.31",
       "OrderLibrary >= 1.0.0"
     ]
   },
@@ -2354,6 +2355,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Client": {
+            "target": "Package",
+            "version": "[6.0.31, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

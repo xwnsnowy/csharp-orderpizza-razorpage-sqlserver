@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "OrderFoodWeb/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.SignalR.Client": "6.0.31",
           "OrderLibrary": "1.0.0"
         },
         "runtime": {

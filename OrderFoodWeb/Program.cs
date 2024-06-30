@@ -60,5 +60,6 @@ app.UseAuthorization();
 // Map Razor Pages and SignalR hubs
 app.MapRazorPages();
 app.MapHub<NotificationHub>("/notificationHub");
+app.MapHub<CartHub>("/cartHub");
 
 app.Run();

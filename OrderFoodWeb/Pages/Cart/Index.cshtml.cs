@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using OrderFoodWeb.Extensions;
+using OrderFoodWeb.Hubs;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,16 +11,27 @@ namespace OrderFoodWeb.Pages.Cart
 {
     public class IndexModel : PageModel
     {
+        private readonly IHubContext<CartHub> _hubContext;
         public List<ProductData> CartProducts { get; set; } = new List<ProductData>();
         public double Subtotal { get; set; }
         public double DeliveryFee { get; set; } = 5.0;
         public double Total { get; set; }
         public AddressModel Address { get; set; } = new AddressModel();
+        public IndexModel(IHubContext<CartHub> hubContext)
+        {
+            _hubContext = hubContext;
+        }
+        private int GetOrderCount()
+        {
+            return CartProducts?.Count ?? 0; 
+        }
 
         public IActionResult OnGet()
         {
             // Retrieve cart items from session
             CartProducts = HttpContext.Session.GetObjectFromJson<List<ProductData>>("Cart") ?? new List<ProductData>();
+
+            HttpContext.Session.SetInt32("CartCount", GetOrderCount());
 
             // Calculate subtotal, delivery fee, and total
             CalculateCartTotal();
@@ -76,6 +89,8 @@ namespace OrderFoodWeb.Pages.Cart
 
             // Recalculate total
             CalculateCartTotal();
+
+            _hubContext.Clients.All.SendAsync("ReceiveCartCount", CartProducts.Count);
 
             return new JsonResult(new { message = "Product added to cart successfully." });
         }

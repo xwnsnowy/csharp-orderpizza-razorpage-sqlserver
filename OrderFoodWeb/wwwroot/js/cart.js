@@ -1,35 +1,16 @@
-﻿let cartCount = 0;
+﻿"use strict";
 
-function openPopup(product) {
-    var popup = document.getElementById("popup");
+var connection = new signalR.HubConnectionBuilder().withUrl("/cartHub").build();
 
-    // Set the product details in the popup
-    document.getElementById("popupProductImage").src = product.imageUrl;
-    document.getElementById("popupProductName").textContent = product.name;
-    document.getElementById("popupProductDescription").textContent = product.description;
+connection.on("ReceiveCartCount", function (cartCount) {
+    document.getElementById("cartCount").textContent = cartCount;
+});
 
-    // Set the product ID in the hidden field
-    document.getElementById("productId").value = product.id;
-    document.getElementById("basePrice").value = product.basePrice;
-
-    popup.style.display = "block";
-    document.addEventListener("mousedown", closeIfClickOutside);
-}
-
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-    document.removeEventListener("mousedown", closeIfClickOutside);
-}
-
-function closeIfClickOutside(event) {
-    var popup = document.getElementById("popup");
-    var popupContent = document.querySelector(".popup-content");
-
-    if (!popupContent.contains(event.target)) {
-        closePopup();
-    }
-}
+connection.start().then(function () {
+    console.log("SignalR connected.");
+}).catch(function (err) {
+    return console.error("SignalR connection error: " + err.toString());
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     var addToCartButtons = document.querySelectorAll(".add-to-cart-button");
@@ -39,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var menuItem = button.closest(".menu-item");
             var product = {
-                id: parseInt(menuItem.dataset.productId), 
+                id: parseInt(menuItem.dataset.productId),
                 imageUrl: menuItem.querySelector(".menu-item-image").src,
                 name: menuItem.querySelector(".menu-item-name").textContent,
                 description: menuItem.querySelector(".menu-item-description").textContent,
@@ -82,10 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         };
 
-
-
-        console.log("Product Data:", productData);
-
         const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
 
         fetch('/Cart/Index?handler=AddToCart', {
@@ -104,12 +81,44 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(data => {
                 console.log(data.message);
-                cartCount++;
-                document.getElementById("cartCount").textContent = cartCount;
+
+                connection.invoke("SendCartCount").catch(err => console.error(err.toString()));
+
                 closePopup();
             })
             .catch(error => {
                 console.error('Error:', error);
             });
     });
+
+    function openPopup(product) {
+        var popup = document.getElementById("popup");
+
+        // Set the product details in the popup
+        document.getElementById("popupProductImage").src = product.imageUrl;
+        document.getElementById("popupProductName").textContent = product.name;
+        document.getElementById("popupProductDescription").textContent = product.description;
+
+        // Set the product ID in the hidden field
+        document.getElementById("productId").value = product.id;
+        document.getElementById("basePrice").value = product.basePrice;
+
+        popup.style.display = "block";
+        document.addEventListener("mousedown", closeIfClickOutside);
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+        document.removeEventListener("mousedown", closeIfClickOutside);
+    }
+
+    function closeIfClickOutside(event) {
+        var popup = document.getElementById("popup");
+        var popupContent = document.querySelector(".popup-content");
+
+        if (!popupContent.contains(event.target)) {
+            closePopup();
+        }
+    }
 });

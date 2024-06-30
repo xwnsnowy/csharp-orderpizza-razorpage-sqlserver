@@ -45,11 +45,13 @@
 
                     <li class="nav-item">
                         <a class="nav-link text-black" asp-area="" asp-page="/Cart/Index">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span id="cartCount" class="badge badge-pill badge-danger">0</span>
+                            <i class="fa-solid fa-cart-shopping" style="position: relative;">
+                                <span id="cartCount" class="badge badge-pill badge-danger" style="background-color:black;font-size:0.55em; position: absolute; top: -10px; right: -8px;">
+                                    @Context.Session.GetInt32("CartCount")
+                                </span>
+                            </i>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>
