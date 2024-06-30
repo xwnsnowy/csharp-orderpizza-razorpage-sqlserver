@@ -20,8 +20,8 @@
                 @foreach (var product in Model.CartProducts)
                 {
                     <div class="flex items-center gap-4 border-b py-4">
-                        <div class="w-24">
-                            <img src="@product.ImageUrl" alt="@product.Name" class="w-full" />
+                        <div class="w-24" style="position:relative">
+                            <img src="@product.ImageUrl" alt="@product.Name" style="width: 100%;"/>
                         </div>
                         <div class="flex-grow">
                             <h3 class="font-semibold">@product.Name</h3>

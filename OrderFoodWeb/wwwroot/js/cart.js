@@ -65,8 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
             Name: document.getElementById("popupProductName").textContent,
             Description: document.getElementById("popupProductDescription").textContent,
             Size: size,
-            Extras: extras
+            Extras: extras.map(extra => { return { Name: extra, Price: 0 }; }) 
         };
+
 
 
         console.log("Product Data:", productData);
