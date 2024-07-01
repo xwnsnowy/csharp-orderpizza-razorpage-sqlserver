@@ -27,7 +27,7 @@ namespace OrderLibrary.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server =LAPTOP-0DISIVLJ\\TIENTHANH; database = OrderFoodDB;uid=sa;pwd=123456;Trusted_Connection=True;Encrypt=False");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-0DISIVLJ\\TIENTHANH;Database=OrderFoodDB;User Id=sa;Password=123456;Encrypt=False");
             }
         }
 
@@ -42,27 +42,42 @@ namespace OrderLibrary.Models
 
             modelBuilder.Entity<Order>(entity =>
             {
+                entity.Property(e => e.City).HasMaxLength(100);
+
+                entity.Property(e => e.Country).HasMaxLength(100);
+
+                entity.Property(e => e.DeliveryFee).HasColumnType("decimal(18, 2)");
+
                 entity.Property(e => e.OrderDate)
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.Status)
-                    .HasMaxLength(50)
-                    .HasDefaultValueSql("('Pending')");
+                entity.Property(e => e.Phone).HasMaxLength(15);
 
-                entity.Property(e => e.TotalPrice).HasColumnType("decimal(10, 2)");
+                entity.Property(e => e.PostalCode).HasMaxLength(10);
+
+                entity.Property(e => e.StreetAddress).HasMaxLength(255);
+
+                entity.Property(e => e.Subtotal).HasColumnType("decimal(18, 2)");
+
+                entity.Property(e => e.Total).HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Orders__UserId__300424B4");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.Property(e => e.Size).HasMaxLength(50);
+                entity.Property(e => e.BasePrice).HasColumnType("decimal(18, 2)");
 
-                entity.Property(e => e.UnitPrice).HasColumnType("decimal(10, 2)");
+                entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+
+                entity.Property(e => e.ProductName).HasMaxLength(255);
+
+                entity.Property(e => e.Size).HasMaxLength(50);
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
@@ -72,6 +87,7 @@ namespace OrderLibrary.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__OrderDeta__Produ__33D4B598");
             });
 
@@ -92,12 +108,17 @@ namespace OrderLibrary.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Products__Catego__2A4B4B5E");
+                    .HasConstraintName("FK__Products__Catego__2B3F6F97");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Products)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Products__UserId__2C3393D0");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__A9D10534E227E771")
+                entity.HasIndex(e => e.Email, "UQ__Users__A9D105344102AC84")
                     .IsUnique();
 
                 entity.Property(e => e.Address).HasMaxLength(300);

@@ -11,5 +11,6 @@ namespace OrderLibrary.Interfaces
     {
         Task AddUserAsync(User user);
         Task<bool> AuthenticateAsync(string username, string password);
+        Task<User> GetUserByUserNameAsync(string username);
     }
 }

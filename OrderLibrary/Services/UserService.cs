@@ -21,6 +21,10 @@ namespace OrderLibrary.Services
         {
             await _userRepository.AddAsync(user);
         }
+        public async Task<User> GetUserByUserNameAsync(string username)
+        {
+            return await _userRepository.GetUserByUserNameAsync(username);
+        }
         public async Task<bool> AuthenticateAsync(string username, string password)
         {
             // Retrieve user by username

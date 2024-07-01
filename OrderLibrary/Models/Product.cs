@@ -16,9 +16,11 @@ namespace OrderLibrary.Models
         public decimal Price { get; set; }
         public string? ImageUrl { get; set; }
         public int? CategoryId { get; set; }
+        public int? UserId { get; set; }
         public DateTime? CreatedAt { get; set; }
 
         public virtual Category? Category { get; set; }
+        public virtual User? User { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

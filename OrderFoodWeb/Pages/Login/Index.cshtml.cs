@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using OrderFoodWeb.Extensions;
 using OrderLibrary.Interfaces;
 using OrderLibrary.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace OrderFoodWeb.Pages.Login
@@ -44,7 +47,15 @@ namespace OrderFoodWeb.Pages.Login
                 return Page();
             }
 
+            var user = await _userService.GetUserByUserNameAsync(Username);
+            if (user == null)
+            {
+                ErrorMessage = "User not found.";
+                return Page();
+            }
+
             HttpContext.Session.SetString("Username", Username);
+            HttpContext.Session.SetObjectAsJson("User", user);
 
             return RedirectToPage("/Index"); 
         }
@@ -52,6 +63,7 @@ namespace OrderFoodWeb.Pages.Login
         public IActionResult OnGetLogout()
         {
             HttpContext.Session.Remove("Username");
+            HttpContext.Session.Remove("User");
             return RedirectToPage("/Login/Index");
         }
     }

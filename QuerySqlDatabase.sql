@@ -1,12 +1,9 @@
--- Create database
 CREATE DATABASE OrderFoodDB;
 GO
 
--- Use the newly created database
 USE OrderFoodDB;
 GO
 
--- Create Users table
 CREATE TABLE Users (
     UserId INT IDENTITY(1,1) PRIMARY KEY,
     UserName NVARCHAR(100) NOT NULL,
@@ -18,14 +15,12 @@ CREATE TABLE Users (
     CreatedAt DATETIME DEFAULT GETDATE()
 );
 
--- Create Categories table
 CREATE TABLE Categories (
     CategoryId INT IDENTITY(1,1) PRIMARY KEY,
     CategoryName NVARCHAR(100) NOT NULL,
     Description NVARCHAR(500)
 );
 
--- Create Products table with ImageUrl column
 CREATE TABLE Products (
     ProductId INT IDENTITY(1,1) PRIMARY KEY,
     ProductName NVARCHAR(100) NOT NULL,
@@ -33,29 +28,37 @@ CREATE TABLE Products (
     Price DECIMAL(10, 2) NOT NULL,
     ImageUrl NVARCHAR(500),
     CategoryId INT,
+    UserId INT,
+    CreatedAt DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (CategoryId) REFERENCES Categories(CategoryId),
-    CreatedAt DATETIME DEFAULT GETDATE()
+    FOREIGN KEY (UserId) REFERENCES Users(UserId) 
 );
 
--- Create Orders table
 CREATE TABLE Orders (
     OrderId INT IDENTITY(1,1) PRIMARY KEY,
-    UserId INT,
+    UserId INT NOT NULL,
+    Phone NVARCHAR(15),
+    StreetAddress NVARCHAR(255),
+    PostalCode NVARCHAR(10),
+    City NVARCHAR(100),
+    Country NVARCHAR(100),
+    Subtotal DECIMAL(18, 2),
+    DeliveryFee DECIMAL(18, 2),
+    Total DECIMAL(18, 2),
     OrderDate DATETIME DEFAULT GETDATE(),
-    TotalPrice DECIMAL(10, 2),
-    Status NVARCHAR(50) DEFAULT 'Pending',
     FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
--- Create OrderDetails table
 CREATE TABLE OrderDetails (
     OrderDetailId INT IDENTITY(1,1) PRIMARY KEY,
     OrderId INT,
-    ProductId INT,
-    Quantity INT NOT NULL,
-    UnitPrice DECIMAL(10, 2) NOT NULL,
+    ProductId INT NOT NULL,
+    ProductName NVARCHAR(255),
     Size NVARCHAR(50),
+    BasePrice DECIMAL(18, 2),
     Extras NVARCHAR(MAX),
+    Quantity INT,
+    Price DECIMAL(18, 2),
     FOREIGN KEY (OrderId) REFERENCES Orders(OrderId),
     FOREIGN KEY (ProductId) REFERENCES Products(ProductId)
 );
@@ -64,7 +67,7 @@ CREATE TABLE OrderDetails (
 -- Insert sample users
 INSERT INTO Users (UserName, Email, PasswordHash, FullName, PhoneNumber, Address)
 VALUES 
-('john_doe', 'john@example.com', 'hashedpassword1', 'John Doe', '1234567890', '123 Main St'),
+('admin', 'admin@gmail.com', 'admin', 'Admin', '1234567890', 'Ha Noi'),
 ('jane_doe', 'jane@example.com', 'hashedpassword2', 'Jane Doe', '0987654321', '456 Elm St');
 
 -- Insert sample categories
@@ -122,18 +125,4 @@ VALUES
 ('Turkey Sandwich', 'Turkey sandwich with lettuce and tomato', 6.50, 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Pizza_Vi%E1%BB%87t_Nam_%C4%91%E1%BA%BF_d%C3%A0y%2C_x%C3%BAc_x%C3%ADch_%28SNaT_2018%29_%287%29.jpg', 2),
 ('Ham Sandwich', 'Ham sandwich with cheese and mustard', 6.00, 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Pizza_Vi%E1%BB%87t_Nam_%C4%91%E1%BA%BF_d%C3%A0y%2C_x%C3%BAc_x%C3%ADch_%28SNaT_2018%29_%287%29.jpg', 2),
 ('Veggie Sandwich', 'Sandwich with assorted vegetables', 5.50, 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Pizza_Vi%E1%BB%87t_Nam_%C4%91%E1%BA%BF_d%C3%A0y%2C_x%C3%BAc_x%C3%ADch_%28SNaT_2018%29_%287%29.jpg', 2);
-
--- Insert sample orders
-INSERT INTO Orders (UserId, TotalPrice)
-VALUES 
-(1, 5.00),
-(2, 4.50);
-
--- Insert sample order details
-INSERT INTO OrderDetails (OrderId, ProductId, Quantity, UnitPrice, Size, Extras)
-VALUES 
-(1, 1, 2, 1.50, NULL, NULL), -- Order 1: 2 Cokes
-(1, 3, 1, 2.00, NULL, NULL), -- Order 1: 1 Pack of chips
-(2, 2, 1, 1.50, NULL, NULL), -- Order 2: 1 Pepsi
-(2, 4, 1, 3.00, NULL, NULL); -- Order 2: 1 Pack of cookies
 

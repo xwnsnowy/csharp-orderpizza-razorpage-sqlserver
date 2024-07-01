@@ -8,6 +8,7 @@ namespace OrderLibrary.Models
         public User()
         {
             Orders = new HashSet<Order>();
+            Products = new HashSet<Product>();
         }
 
         public int UserId { get; set; }
@@ -20,5 +21,6 @@ namespace OrderLibrary.Models
         public DateTime? CreatedAt { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

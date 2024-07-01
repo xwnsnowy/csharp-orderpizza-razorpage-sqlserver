@@ -21,7 +21,7 @@
                 {
                     <div class="flex items-center gap-4 border-b py-4">
                         <div class="w-24" style="position:relative">
-                            <img src="@product.ImageUrl" alt="@product.Name" style="width: 100%;"/>
+                            <img src="@product.ImageUrl" alt="@product.Name" style="width: 100%;" />
                         </div>
                         <div class="flex-grow">
                             <h3 class="font-semibold">@product.Name</h3>
@@ -69,24 +69,24 @@
             <h2>Checkout</h2>
             <form method="post" asp-page-handler="ProceedToCheckout">
                 <label>Phone</label>
-                <input type="tel" placeholder="Phone number" asp-for="Address.Phone" />
+                <input type="text" placeholder="Phone number" asp-for="Phone" />
 
                 <label>Street address</label>
-                <input type="text" placeholder="Street address" asp-for="Address.StreetAddress" />
+                <input type="text" placeholder="Street address" asp-for="StreetAddress" />
 
                 <div class="grid grid-cols-2 gap-2">
                     <div>
                         <label>Postal code</label>
-                        <input type="text" placeholder="Postal code" asp-for="Address.PostalCode" />
+                        <input type="text" placeholder="Postal code" asp-for="PostalCode" />
                     </div>
                     <div>
                         <label>City</label>
-                        <input type="text" placeholder="City" asp-for="Address.City" />
+                        <input type="text" placeholder="City" asp-for="City" />
                     </div>
                 </div>
 
                 <label>Country</label>
-                <input type="text" placeholder="Country" asp-for="Address.Country" />
+                <input type="text" placeholder="Country" asp-for="Country" />
 
                 <button type="submit" class="btn btn-primary mt-4">Pay $@Model.Total</button>
             </form>
