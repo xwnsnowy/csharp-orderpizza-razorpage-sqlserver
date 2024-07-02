@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
-
+        console.log(productData);
         fetch('/Cart/Index?handler=AddToCart', {
             method: 'POST',
             headers: {

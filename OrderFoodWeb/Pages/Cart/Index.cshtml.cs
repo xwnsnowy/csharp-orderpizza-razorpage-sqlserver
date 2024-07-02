@@ -19,6 +19,7 @@ namespace OrderFoodWeb.Pages.Cart
         private readonly IOrderService _orderService;
         private readonly IOrderRepository _orderRepository;
         private readonly IOrderDetailService _orderDetailService;
+        private readonly IOrderDetailRepository _orderDetailRepository;
 
         private readonly IHubContext<CartHub> _hubContext;
         public List<ProductData> CartProducts { get; set; } = new List<ProductData>();
@@ -35,13 +36,14 @@ namespace OrderFoodWeb.Pages.Cart
             IHubContext<CartHub> hubContext,
             IOrderService orderService,
             IOrderDetailService orderDetailService,
-            IOrderRepository orderRepository)
+            IOrderRepository orderRepository,
+            IOrderDetailRepository orderDetailRepository)
         {
             _hubContext = hubContext;
             _orderService = orderService;
             _orderDetailService = orderDetailService;
             _orderRepository = orderRepository;
-
+            _orderDetailRepository = orderDetailRepository;
         }
         private int GetOrderCount()
         {
@@ -88,6 +90,7 @@ namespace OrderFoodWeb.Pages.Cart
         public async Task<IActionResult> OnPostProceedToCheckout()
         {
             var user = HttpContext.Session.GetObjectFromJson<User>("User");
+            CartProducts = HttpContext.Session.GetObjectFromJson<List<ProductData>>("Cart") ?? new List<ProductData>();
 
             Subtotal = HttpContext.Session.GetDouble("Subtotal");
             Total = HttpContext.Session.GetDouble("Total");
@@ -123,23 +126,21 @@ namespace OrderFoodWeb.Pages.Cart
 
                 await _orderRepository.AddAsync(order);
 
-                //foreach (var cartProduct in CartProducts)
-                //{
-                //    var orderDetail = new OrderDetail
-                //    {
-                //        OrderId = order.OrderId,
-                //        ProductId = cartProduct.Id,
-                //        ProductName = cartProduct.Name,
-                //        Size = cartProduct.Size,
-                //        BasePrice = (decimal)cartProduct.BasePrice,
-                //        Extras = string.Join(", ", cartProduct.Extras.Select(e => $"{e.Name} ${e.Price}")),
-                //        Quantity = 1, 
-                //        Price = (decimal)cartProduct.Price
-                //    };
-                //    _context.OrderDetails.Add(orderDetail);
-                //}
-
-                //await _context.SaveChangesAsync();
+                foreach (var cartProduct in CartProducts)
+                {
+                    var orderDetail = new OrderDetail
+                    {
+                        OrderId = order.OrderId,
+                        ProductId = cartProduct.Id,
+                        ProductName = cartProduct.Name,
+                        Size = cartProduct.Size,
+                        BasePrice = (decimal)cartProduct.BasePrice,
+                        Extras = string.Join(", ", cartProduct.Extras.Select(e => $"{e.Name} ${e.Price}")),
+                        Quantity = 1,
+                        Price = (decimal)cartProduct.Price
+                    };
+                    await _orderDetailRepository.AddAsync(orderDetail);
+                }
 
                 HttpContext.Session.Remove("Cart");
 
@@ -196,7 +197,7 @@ namespace OrderFoodWeb.Pages.Cart
 
     public class ExtraData
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public double Price { get; set; }
     }
 }
