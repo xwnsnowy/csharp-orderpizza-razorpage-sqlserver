@@ -10,5 +10,7 @@ namespace OrderLibrary.Interfaces
     public interface IOrderService
     {
         Task<IEnumerable<Order>> GetAllOrdersAsync();
+        Task<Order> GetOrderByIdAsync(int id);
+        Task<IEnumerable<Order>> GetAllOrdersByUserIdAsync(int userId);
     }
 }

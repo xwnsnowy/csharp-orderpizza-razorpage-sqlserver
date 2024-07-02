@@ -9,5 +9,6 @@ namespace OrderLibrary.Interfaces
 {
     public interface IOrderDetailRepository : IRepository<OrderDetail>
     {
+        Task<IEnumerable<OrderDetail>> GetDetailsByOrderIdAsync(int orderId);
     }
 }

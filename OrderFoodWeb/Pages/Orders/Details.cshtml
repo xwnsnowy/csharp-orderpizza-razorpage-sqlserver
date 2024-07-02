@@ -1,0 +1,36 @@
+﻿@page "{id:int}"
+@model OrderFoodWeb.Pages.Orders.DetailsModel
+@{
+    ViewData["Title"] = "Order Details";
+}
+<link rel="stylesheet" href="~/css/orders.css" />
+<div class="order-details-container">
+    <h1 class="order-details-header">Order Details</h1>
+    <div class="order-details-info">
+        <p><strong>Order ID:</strong> @Model.Order.OrderId</p>
+        <p><strong>Date:</strong> @Model.Order.OrderDate?.ToString("yyyy-MM-dd")</p>
+        <p><strong>Total:</strong> $@Model.Order.Total</p>
+    </div>
+    <h2 class="order-items-header">Items</h2>
+    <table class="order-items-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderDetails)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Size</td>
+                    <td>@item.Quantity</td>
+                    <td>$@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -3,24 +3,80 @@
   "WorkspaceRootPath": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\cart\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\cart\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\hubs\\carthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\hubs\\carthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\wwwroot\\css\\orders-detail.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\wwwroot\\css\\orders-detail.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\orders\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\orders\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\orders\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\orders\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\services\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\services\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\repositories\\orderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\repositories\\orderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\interfaces\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\interfaces\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\interfaces\\iorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\interfaces\\iorderdetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|solutionrelative:orderlibrary\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,49 +86,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
-              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
-              "RelativeToolTip": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAAADEAAAAjAAAA",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T03:54:29.404Z",
+              "WhenOpened": "2024-07-02T04:49:04.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CartHub.cs",
-              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Hubs\\CartHub.cs",
-              "RelativeDocumentMoniker": "OrderFoodWeb\\Hubs\\CartHub.cs",
-              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Hubs\\CartHub.cs",
-              "RelativeToolTip": "OrderFoodWeb\\Hubs\\CartHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T03:53:29.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cart.js",
-              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\js\\cart.js",
-              "RelativeDocumentMoniker": "OrderFoodWeb\\wwwroot\\js\\cart.js",
-              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\js\\cart.js",
-              "RelativeToolTip": "OrderFoodWeb\\wwwroot\\js\\cart.js",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAEIAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-02T03:41:51.517Z",
+              "Title": "orders-detail.css",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\css\\orders-detail.css",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\wwwroot\\css\\orders-detail.css",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\css\\orders-detail.css",
+              "RelativeToolTip": "OrderFoodWeb\\wwwroot\\css\\orders-detail.css",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAwwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-02T04:48:28.833Z",
               "EditorCaption": ""
             },
             {
@@ -83,22 +122,222 @@
               "RelativeDocumentMoniker": "OrderLibrary\\Models\\OrderDetail.cs",
               "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Models\\OrderDetail.cs",
               "RelativeToolTip": "OrderLibrary\\Models\\OrderDetail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T03:19:01.805Z"
+              "WhenOpened": "2024-07-02T04:47:43.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
-              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
-              "RelativeToolTip": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAAAK0AAAAuAAAA",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Orders\\Index.cshtml.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Index.cshtml.cs",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Orders\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T03:18:25.527Z",
+              "WhenOpened": "2024-07-02T04:47:15.972Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Orders\\Details.cshtml.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Details.cshtml.cs",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Orders\\Details.cshtml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACAAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:36:19.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderDetailRepository.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\OrderDetailRepository.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Repositories\\OrderDetailRepository.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\OrderDetailRepository.cs",
+              "RelativeToolTip": "OrderLibrary\\Repositories\\OrderDetailRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:32:28.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Orders\\Index.cshtml",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Index.cshtml",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Orders\\Index.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T04:40:16.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Orders\\Details.cshtml",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Orders\\Details.cshtml",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Orders\\Details.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwCMAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T04:40:22.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IOrderDetailService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderDetailService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Interfaces\\IOrderDetailService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderDetailService.cs",
+              "RelativeToolTip": "OrderLibrary\\Interfaces\\IOrderDetailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:31:19.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IOrderDetailRepository.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderDetailRepository.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Interfaces\\IOrderDetailRepository.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderDetailRepository.cs",
+              "RelativeToolTip": "OrderLibrary\\Interfaces\\IOrderDetailRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:31:49.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "OrderLibrary\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:39:00.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderDetailService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\OrderDetailService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Services\\OrderDetailService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\OrderDetailService.cs",
+              "RelativeToolTip": "OrderLibrary\\Services\\OrderDetailService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAUwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:34:01.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Services\\ProductService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\ProductService.cs",
+              "RelativeToolTip": "OrderLibrary\\Services\\ProductService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:38:20.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Services\\OrderService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Services\\OrderService.cs",
+              "RelativeToolTip": "OrderLibrary\\Services\\OrderService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:33:57.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Repositories\\OrderRepository.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "OrderLibrary\\Repositories\\OrderRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:32:25.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Interfaces\\IOrderService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "OrderLibrary\\Interfaces\\IOrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:31:18.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "OrderLibrary\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:37:32.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Repositories\\RepositoryBase.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Repositories\\RepositoryBase.cs",
+              "RelativeToolTip": "OrderLibrary\\Repositories\\RepositoryBase.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:39:18.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "OrderLibrary\\Interfaces\\IProductService.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "OrderLibrary\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:37:08.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

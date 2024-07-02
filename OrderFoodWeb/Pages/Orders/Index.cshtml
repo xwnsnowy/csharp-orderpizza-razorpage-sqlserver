@@ -1,6 +1,32 @@
 ﻿@page
 @model OrderFoodWeb.Pages.Orders.IndexModel
 @{
+    ViewData["Title"] = "Orders";
 }
 
-<div>ABC</div>
+<div class="orders-container">
+    <h1 class="orders-header">Order List</h1>
+    <table class="orders-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.OrderDate?.ToString("yyyy-MM-dd")</td>
+                    <td>$@order.Total</td>
+                    <td>
+                        <a class="details-button" asp-page="./Details" asp-route-id="@order.OrderId">View Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

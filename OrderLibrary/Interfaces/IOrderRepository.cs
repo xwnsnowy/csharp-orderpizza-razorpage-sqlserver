@@ -9,5 +9,7 @@ namespace OrderLibrary.Interfaces
 {
     public interface IOrderRepository : IRepository<Order>
     {
+        Task<Order> GetOrderByIdAsync(int id);
+        Task<IEnumerable<Order>> GetAllOrderByUserIdAsync(int userId);
     }
 }

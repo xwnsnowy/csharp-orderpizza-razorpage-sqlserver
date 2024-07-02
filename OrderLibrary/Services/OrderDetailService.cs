@@ -1,5 +1,6 @@
 ﻿using OrderLibrary.Interfaces;
 using OrderLibrary.Models;
+using OrderLibrary.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,11 @@ namespace OrderLibrary.Services
         public async Task<IEnumerable<OrderDetail>> GetAllOrdersAsync()
         {
             return await _orderDetailRepository.GetAllAsync();
+        }
+
+        public async Task<IEnumerable<OrderDetail>> GetDetailsByOrderIdAsync(int orderId)
+        {
+            return await _orderDetailRepository.GetDetailsByOrderIdAsync(orderId);
         }
     }
 }
