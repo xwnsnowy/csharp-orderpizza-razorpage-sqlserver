@@ -71,13 +71,19 @@ namespace OrderFoodWeb.Pages.Cart
             return Page();
         }
 
-        public IActionResult OnPostRemoveFromCart(int productId)
+        public IActionResult OnPostRemoveFromCart(int index)
         {
             // Retrieve current cart items from session
             CartProducts = HttpContext.Session.GetObjectFromJson<List<ProductData>>("Cart") ?? new List<ProductData>();
 
-            // Remove the product from cart
-            CartProducts.RemoveAll(p => p.Id == productId);
+            // Find the product with the specific index
+            var productToRemove = CartProducts.FirstOrDefault(p => p.Index == index);
+
+            // If found, remove the product from the cart
+            if (productToRemove != null)
+            {
+                CartProducts.Remove(productToRemove);
+            }
 
             // Update session with the updated cart items
             HttpContext.Session.SetObjectAsJson("Cart", CartProducts);
@@ -87,6 +93,7 @@ namespace OrderFoodWeb.Pages.Cart
 
             return RedirectToPage("/Cart/Index");
         }
+
         public async Task<IActionResult> OnPostProceedToCheckout()
         {
             var user = HttpContext.Session.GetObjectFromJson<User>("User");
@@ -109,7 +116,6 @@ namespace OrderFoodWeb.Pages.Cart
 
             if (ModelState.IsValid)
             {
-
                 var order = new Order
                 {
                     UserId = user.UserId,
@@ -162,6 +168,9 @@ namespace OrderFoodWeb.Pages.Cart
             // Retrieve current cart items from session
             CartProducts = HttpContext.Session.GetObjectFromJson<List<ProductData>>("Cart") ?? new List<ProductData>();
 
+            // Assign a unique index to the new product
+            productData.Index = CartProducts.Count > 0 ? CartProducts.Max(p => p.Index) + 1 : 1;
+
             // Add the new product to the cart
             CartProducts.Add(productData);
 
@@ -193,6 +202,7 @@ namespace OrderFoodWeb.Pages.Cart
         public List<ExtraData> Extras { get; set; } = new List<ExtraData>();
         public double BasePrice { get; set; }
         public double Price => BasePrice + Extras.Sum(e => e.Price);
+        public int Index { get; set; }
     }
 
     public class ExtraData

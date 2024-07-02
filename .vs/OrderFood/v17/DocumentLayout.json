@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\pages\\cart\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\pages\\cart\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderfoodweb\\hubs\\carthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FB482B9-D719-4180-99D8-F0B18A29C7E6}|OrderFoodWeb\\OrderFoodWeb.csproj|solutionrelative:orderfoodweb\\hubs\\carthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE980937-D6C8-4BBB-9287-218CA390D8F9}|OrderLibrary\\OrderLibrary.csproj|d:\\ky5\\prn221\\source\\repos\\orderfood\\orderlibrary\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +38,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
+              "RelativeToolTip": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAADEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:54:29.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartHub.cs",
+              "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Hubs\\CartHub.cs",
+              "RelativeDocumentMoniker": "OrderFoodWeb\\Hubs\\CartHub.cs",
+              "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Hubs\\CartHub.cs",
+              "RelativeToolTip": "OrderFoodWeb\\Hubs\\CartHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T03:53:29.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "cart.js",
               "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\js\\cart.js",
               "RelativeDocumentMoniker": "OrderFoodWeb\\wwwroot\\js\\cart.js",
               "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\wwwroot\\js\\cart.js",
               "RelativeToolTip": "OrderFoodWeb\\wwwroot\\js\\cart.js",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEIAAAAhAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAEIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-07-02T03:41:51.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "OrderDetail.cs",
               "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderLibrary\\Models\\OrderDetail.cs",
               "RelativeDocumentMoniker": "OrderLibrary\\Models\\OrderDetail.cs",
@@ -51,18 +85,17 @@
               "RelativeToolTip": "OrderLibrary\\Models\\OrderDetail.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T03:19:01.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T03:19:01.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
               "ToolTip": "D:\\Ky5\\PRN221\\source\\repos\\OrderFood\\OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
               "RelativeToolTip": "OrderFoodWeb\\Pages\\Cart\\Index.cshtml.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAGgAAAAPAAAA",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAAAK0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T03:18:25.527Z",
               "EditorCaption": ""

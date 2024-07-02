@@ -43,7 +43,7 @@
                             $@product.Price
                         </div>
                         <div class="ml-2">
-                            <form method="post" asp-page-handler="RemoveFromCart" asp-route-productId="@product.Id">
+                            <form method="post" asp-page-handler="RemoveFromCart" asp-route-index="@product.Index">
                                 <button type="submit" class="p-2">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
